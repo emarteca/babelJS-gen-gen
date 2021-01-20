@@ -28,6 +28,8 @@ There is an example of a JS file and corresponding generated generation code in 
 
 To recreate: `ts-node gen_babel_gencode.ts --file_to_gengen Example/file.js --gen_full_script true`
 
+Running `ts-node Example/sample_output.ts` will print the same code as contained in `file.js`.
+
 #### Example commands using `ts-node`
 ```
 ts-node gen_babel_gencode.ts --file_to_gengen file.js --gen_full_script true --output_file output.js
