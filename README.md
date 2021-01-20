@@ -21,14 +21,24 @@ The arguments to `babeljs-gen-gen` are as follows:
 * *optional* `output_file`: if specified, output the generation code to this file.
   The default behaviour is to print to console.
   
-### Example of code generated
-There is an example of a JS file and corresponding generated generation code in the `Example` directory.
+### Examples of code generated
+There are some examples of JS files and corresponding generated generation code in the `Examples` directory.
+
+#### Short example
 * `file.js` is the sample input JS file
 * `sample_output.ts` is the corresponding generated generation script
 
 To recreate: `ts-node gen_babel_gencode.ts --file_to_gengen Example/file.js --gen_full_script true`
 
 Running `ts-node Example/sample_output.ts` will print the same code as contained in `file.js`.
+
+#### Longer example
+* `babel_core_lib_index.js` is the sample input JS file, taken from the compiled [babel core package](https://babeljs.io/docs/en/babel-core)'s `lib/index.js` file.
+* `babel_core_lib_output.ts` is the corresponding generated generation script
+
+To recreate: `ts-node gen_babel_gencode.ts --file_to_gengen Example/babel_core_lib_index.js --gen_full_script true`
+
+Running `ts-node Example/babel_core_lib_output.ts` will print the same code (modulo a few formatting improvements) as contained in `babel_core_lib_index.js`.
 
 #### Example commands using `ts-node`
 ```
